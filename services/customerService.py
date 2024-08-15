@@ -17,6 +17,12 @@ def login(username, password): #Login using unique info so we don't query multip
             "auth_token": auth_token
         }
         return response
+    else:
+        response = {
+            "status": "fail",
+            "message": "Invalid username or password"
+        }
+        return response
 
 
 def save(customer_data):
